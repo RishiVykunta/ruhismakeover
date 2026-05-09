@@ -1440,15 +1440,13 @@
 
       /* HERO STATS MOBILE FIX */
       .hero-stats {
-        position: relative;
-        width: 100%;
-        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1px;
-        background: var(--gold);
-        padding: 0;
-        margin-top: 0;
-        z-index: 5;
+      }
+
+      .stat-item {
+        padding: 25px 10px;
+        border-right: none;
       }
 
       .stat-item {
@@ -1629,25 +1627,26 @@
         <button class="hero-dot" onclick="goToSlide(2)"></button>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">500+</div>
-          <div class="stat-label">Students Trained</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">LACE</div>
-          <div class="stat-label">UK Certified Academy</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Cities | Courses</div>
-        </div>
-      </div>
     </section>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Students Trained</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">LACE</div>
+        <div class="stat-label">UK Certified Academy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Cities | Courses</div>
+      </div>
+    </div>
 
     <!-- QUICK ABOUT TEASER -->
     <section style="padding:60px 8%; background:var(--white);">
