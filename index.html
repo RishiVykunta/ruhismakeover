@@ -1440,9 +1440,15 @@
 
       /* HERO STATS MOBILE FIX */
       .hero-stats {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
         grid-template-columns: 1fr 1fr;
         gap: 1px;
-        margin-top: 40px;
+        margin-top: 0;
+        z-index: 5;
+        animation: none;
       }
 
       .stat-item {
