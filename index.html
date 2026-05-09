@@ -1534,7 +1534,38 @@
       .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
+        padding: 40px 20px;
+      }
+
+      .footer-brand img {
+        width: 80px;
+        margin-bottom: 20px;
+      }
+
+      .footer-heading {
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        font-size: 1rem;
+      }
+
+      .social-links {
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
       }
     }
 
@@ -1644,24 +1675,7 @@
 
     </section>
     
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">15+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">500+</div>
-        <div class="stat-label">Students Trained</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">LACE</div>
-        <div class="stat-label">UK Certified Academy</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Cities | Courses</div>
-      </div>
-    </div>
+    </section>
 
     <!-- QUICK ABOUT TEASER -->
     <section style="padding:60px 8%; background:var(--white);">
@@ -1710,6 +1724,26 @@
       </div>
       <button class="btn-primary" onclick="showPage('contact')"
         style="background:var(--deep-red);color:var(--gold);flex-shrink:0;">Enroll Now →</button>
+    </div>
+
+    <!-- STATS (Moved here for mobile narrative) -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Students Trained</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">LACE</div>
+        <div class="stat-label">UK Certified Academy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Cities | Courses</div>
+      </div>
     </div>
 
   </div>
@@ -2241,13 +2275,28 @@
         </ul>
       </div>
       <div>
-        <h4 class="footer-heading">Contact</h4>
-        <ul class="footer-links">
-          <li><a href="tel:+919052248700">📞 9052248700</a></li>
-          <li><a href="https://wa.me/919052248700">💬 WhatsApp</a></li>
-          <li><a href="#">📍 Brahmin Street, Vijayawada 520001</a></li>
-          <li><a href="https://www.instagram.com/ruhismakeoveracademy" target="_blank">📸 @ruhismakeoveracademy</a></li>
-          <li><a href="https://www.facebook.com/share/1AhDqfqx6E/" target="_blank">👍 Facebook Page</a></li>
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-links" style="list-style:none; padding:0;">
+          <li style="margin-bottom:1rem;">
+            <a href="tel:+919052248700" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+              <i class="fas fa-phone-alt" style="color:var(--gold); width:20px;"></i> 9052248700
+            </a>
+          </li>
+          <li style="margin-bottom:1rem;">
+            <a href="https://wa.me/919052248700" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+              <i class="fab fa-whatsapp" style="color:var(--gold); width:20px;"></i> WhatsApp Support
+            </a>
+          </li>
+          <li style="margin-bottom:1rem;">
+            <a href="#" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+              <i class="fas fa-map-marker-alt" style="color:var(--gold); width:20px;"></i> Vijayawada, 520001
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ruhismakeoveracademy" target="_blank" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+              <i class="fab fa-instagram" style="color:var(--gold); width:20px;"></i> @ruhismakeoveracademy
+            </a>
+          </li>
         </ul>
       </div>
     </div>
