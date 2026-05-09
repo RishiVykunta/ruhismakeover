@@ -1553,9 +1553,20 @@
       transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    /* Single page layout */
-    .page {
-      display: block;
+    /* Hybrid Layout: Desktop = Single Page | Mobile = Multi Page */
+    @media (min-width: 901px) {
+      .page {
+        display: block !important;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        display: none;
+      }
+      .page.active {
+        display: block;
+      }
     }
   </style>
 </head>
@@ -2249,17 +2260,30 @@
   </a>
 
   <script>
-    // ── PAGE NAVIGATION (Smooth Scroll) ──
+    // ── HYBRID NAVIGATION ──
     function showPage(page) {
+      const isMobile = window.innerWidth <= 900;
       const target = document.getElementById(page + '-page');
-      if (target) {
-        const offset = 72; // Nav height
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+
+      if (isMobile) {
+        // MOBILE: Multi-page feel (Toggle visibility)
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        if (target) {
+          target.classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+      } else {
+        // DESKTOP: Single-page feel (Smooth scroll)
+        if (target) {
+          const offset = 72;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
+      closeMobileNav();
     }
 
     // ── NAV SCROLL ──
